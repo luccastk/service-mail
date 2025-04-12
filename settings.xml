@@ -1,0 +1,10 @@
+<settings>
+  <servers>
+    <server>
+      <id>github</id> <!-- deve bater com o ID do repositório no POM -->
+      <username>luccastk</username> <!-- seu username GitHub -->
+      <password>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</password> <!-- seu token GitHub Packages -->
+    </server>
+  </servers>
+</settings>
+
