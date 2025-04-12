@@ -7,8 +7,8 @@ spring:
   application:
     name: service-mail
   mail:
-    host: smtp.gmail.com
-    port: 587
+    host: ${MAIL_HOST}
+    port: ${MAIL_PORT}
     username: ${MAIL_USERNAME}
     password: ${MAIL_PASSWORD}
     properties:
@@ -24,7 +24,7 @@ spring:
     default-encoding: UTF-8
     test-connection: false
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: ${KAFKA_SERVER}
 
 mail:
   from:
