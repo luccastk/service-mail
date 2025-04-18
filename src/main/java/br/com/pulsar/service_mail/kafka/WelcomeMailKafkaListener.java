@@ -4,6 +4,7 @@ import br.com.pulsar.service_mail.dtos.User;
 import br.com.pulsar.service_mail.service.EmailService;
 import jakarta.mail.MessagingException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.annotation.RetryableTopic;
 import org.springframework.retry.annotation.Backoff;
@@ -13,6 +14,7 @@ import java.io.UnsupportedEncodingException;
 
 @Service
 @RequiredArgsConstructor
+@ConditionalOnProperty(name = "kafka.enable", havingValue = "true", matchIfMissing = false)
 public class WelcomeMailKafkaListener {
 
     private final EmailService emailService;
