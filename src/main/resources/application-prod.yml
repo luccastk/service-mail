@@ -26,6 +26,9 @@ spring:
   kafka:
     bootstrap-servers: ${KAFKA_SERVER}
 
+kafka:
+  enable: true
+
 mail:
   from:
     name: Pulsar
